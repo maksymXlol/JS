@@ -11,8 +11,17 @@ age = 12;
 
 let x = 54;
 let y = 17;
+let z = x / 27 + y * 2;
+let o = x % 5;
+let p = 2 ** 5;
+x += y; // x = x + y
+
+age = age + 1; // age += 1, *=, /=, -=
 
 const pi = 3.14;
 // pi = 15; // error : you can't change const
 
 console.log(pi);
+console.log(x);
+console.log(--age);
+console.log(age);
