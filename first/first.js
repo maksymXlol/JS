@@ -25,3 +25,19 @@ console.log(pi);
 console.log(x);
 console.log(--age);
 console.log(age);
+
+let car = {
+  model: "BMW",
+  year: 2019,
+  color: "red",
+  passenger: {
+    name: "John",
+    age: 21,
+  },
+};
+
+console.log(car.color); //red
+
+car.color = "black";
+
+car.engine = 100;
