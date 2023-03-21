@@ -22,6 +22,7 @@ const number_1 = document.querySelector(".number-1");
 const number_2 = document.querySelector(".number-2");
 const operation = document.querySelector(".operation");
 const btn = document.querySelector(".cal");
+const resultInput = document.querySelector(".result");
 
 btn.addEventListener("click", clickbtn);
 
@@ -30,7 +31,7 @@ function clickbtn() {
   let b = +number_2.value;
   let sign = operation.value;
   let result = calculate(a, b, sign);
-  alert(`a + b = ${result}`);
+  resultInput.innerHTML = `${a} ${sign} ${b} = ${result}`;
 
   number_1.value = "";
   number_2.value = "";
@@ -43,9 +44,11 @@ function calculate(a, b, sign) {
   } else if (sign == "-") {
     result = a - b;
   } else if (sign == "x") {
-    alert(a * b);
+    result = a * b;
   } else if (sign == "/") {
-    alert(a / b);
+    result = a / b;
   }
   return result;
 }
+
+//div.innerHTML = `${a} ${sign} ${b} = ${result}`;
